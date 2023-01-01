@@ -1,0 +1,390 @@
+// main section animate
+// -------------------------------------------------------------------------------------
+.main__background-2
+{
+    opacity: 0 !important;
+    transition: all 0.8s ease 0s;
+    &._active
+    {
+        opacity: 1 !important;
+    }
+}
+
+.border img
+{
+    transform: scale(0);
+    transition: all 1s ease 0s;
+    &._active
+    {
+        transform: scale(1) !important;
+        transition: all 1s ease 0.5s;
+    }
+}
+
+.intro__content
+{
+    transition: all 1s ease 0s;
+    background: rgba(0, 0, 0, 0.0) !important;
+    backdrop-filter: blur(0px) !important;
+    &._active
+    {
+        backdrop-filter: blur(4px) !important;
+        background: rgba(7, 7, 7, 0.35) !important;
+        transition: all 1s ease 1.5s;
+    }
+}
+
+.direction
+{
+    transform: translate(0px, 120%);
+    opacity: 0;
+    transition: all 0.8s ease 0s;
+    &._active
+    {
+        transform: translate(0px, 0px) !important;
+        opacity: 1 !important;
+        transition: all 0.8s ease 2s;
+    }
+}
+
+.description
+{
+    transform: translate(0px, 120%);
+    opacity: 0;
+    transition: all 0.8s ease 0s;
+    &._active
+    {
+        transform: translate(0px, 0px) !important;
+        opacity: 1 !important;
+        transition: all 0.8s ease 2.5s;
+    }
+}
+
+.l1
+{
+    transform: translate(-110%, 0px);
+    opacity: 0;
+    transition: all 0.8s ease 0s;
+    &._active
+    {
+        transform: translate(0px, 0px) !important;
+        opacity: 1 !important;
+        transition: all 0.8s ease 3.5s;
+    }
+}
+
+.l2
+{
+    transform: translate(-110%, 0px);
+    opacity: 0;
+    transition: all 0.8s ease 0s;
+    &._active
+    {
+        transform: translate(0px, 0px) !important;
+        opacity: 1 !important;
+        transition: all 0.8s ease 3.25s;
+    }
+}
+
+.l3
+{
+    transform: translate(-110%, 0px);
+    opacity: 0;
+    transition: all 0.8s ease 0s;
+    &._active
+    {
+        transform: translate(0px, 0px) !important;
+        opacity: 1 !important;
+        transition: all 0.8s ease 3s;
+    }
+}
+
+.r1
+{
+    transform: translate(110%, 0px);
+    opacity: 0;
+    transition: all 0.8s ease 0s;
+    &._active
+    {
+        transform: translate(0px, 0px) !important;
+        opacity: 1 !important;
+        transition: all 0.8s ease 3.5s;
+    }
+}
+
+.r2
+{
+    transform: translate(110%, 0px);
+    opacity: 0;
+    transition: all 0.8s ease 0s;
+    &._active
+    {
+        transform: translate(0px, 0px) !important;
+        opacity: 1 !important;
+        transition: all 0.8s ease 3.25s;
+    }
+}
+
+.r3
+{
+    transform: translate(110%, 0px);
+    opacity: 0;
+    transition: all 0.8s ease 0s;
+    &._active
+    {
+        transform: translate(0px, 0px) !important;
+        opacity: 1 !important;
+        transition: all 0.8s ease 3s;
+    }
+}
+@media(max-width: 767px)
+{
+    .intro__content._active
+    {
+        background: rgba(0, 0, 0, 0) !important;
+        backdrop-filter: blur(0px) !important;
+    }
+    .direction._active
+    {
+        transition: all 0.8s ease 1s;
+    }
+    .description._active
+    {
+        transition: all 0.8s ease 1.5s;
+    }
+    .l1._active
+    {
+        transition: all 0.8s ease 2.5s;
+    }
+    .l2._active
+    {
+        transition: all 0.8s ease 2.25s;
+    }
+    .l3._active
+    {
+        transition: all 0.8s ease 2s;
+    }
+    .r1._active
+    {
+        transition: all 0.8s ease 2.5s;
+    }
+    .r2._active
+    {
+        transition: all 0.8s ease 2.25s;
+    }
+    .r3._active
+    {
+        transition: all 0.8s ease 2s;
+    }
+}
+// -------------------------------------------------------------------------------------
+
+// resume section animate
+// -------------------------------------------------------------------------------------
+.resume__title-1 img,
+.projects__title img,
+.services__title img
+{
+    transform: translate(-110%, 0px);
+    opacity: 0;
+    transition: all 1s ease 0s;
+    &._active
+    {
+        transform: translate(0px, 0px) !important;
+        opacity: 1 !important;
+    }
+}
+
+.image-border
+{
+    opacity: 0;
+    transition: all 1s ease 1s;
+    &._active
+    {
+        opacity: 1 !important;
+    }
+}
+
+.resume__title
+{
+    transform: translate(0px, 120%);
+    opacity: 0;
+    transition: all 0.8s ease 0s;
+    &._active
+    {
+        transform: translate(0px, 0px) !important;
+        opacity: 1 !important;
+    }
+}
+
+.resume__subtitle
+{
+    transform: translate(0px, 120%);
+    opacity: 0 !important;
+    transition: all 0.8s ease 0s;
+    &._active
+    {
+        transform: translate(0px, 0px) !important;
+        opacity: 1 !important;
+        transition: all 0.8s ease 0.5s;
+    }
+}
+
+.progress
+{
+    transform: scale(0);
+    transition: all 1s ease 0s;
+    &._active
+    {
+        transform: scale(1) !important;
+        transition: all 1s ease 1s;
+    }
+}
+
+.skill-title
+{
+    transform: translate(0px, 120%);
+    opacity: 0;
+    transition: all 0.8s ease 0s;
+    &._active
+    {
+        transform: translate(0px, 0px) !important;
+        opacity: 1 !important;
+    }
+}
+
+.skill-line
+{
+    width: 0% !important;
+    transition: all 0.8s ease 0s;
+    &._active
+    {
+        width: 10% !important;
+        transition: all 0.8s ease 0.5s;
+    }
+}
+
+.skill-text
+{
+    transform: translate(-20%, 0px);
+    opacity: 0;
+    transition: all 0.8s ease 0s;
+    &._active
+    {
+        transform: translate(0px, 0px) !important;
+        opacity: 1 !important;
+        transition: all 0.8s ease 0.7s;
+    }
+}
+
+.button-text
+{
+    overflow: hidden;
+    width: 0% !important;
+    transition: all 1.5s ease 0s;
+    &._active
+    {
+        width: 100% !important;
+    }
+}
+// -------------------------------------------------------------------------------------
+
+// projects section animate
+// -------------------------------------------------------------------------------------
+.projects__slider-title
+{
+    transform: translate(0px, 120%);
+    opacity: 0;
+    transition: all 0.8s ease 0s;
+    &._active
+    {
+        transform: translate(0px, 0px) !important;
+        opacity: 1 !important;
+    }
+}
+
+.swiper-button-next
+{
+    transform: translate(120%, 0px);
+    opacity: 0;
+    transition: all 0.8s ease 0s;
+    &._active
+    {
+        transform: translate(0px, 0px) !important;
+        opacity: 1 !important;
+        transition: all 0.8s ease 0.5s;
+    }
+}
+
+.swiper-button-prev
+{
+    transform: translate(-120%, 0px);
+    opacity: 0;
+    transition: all 0.8s ease 0s;
+    &._active
+    {
+        transform: translate(0px, 0px) !important;
+        opacity: 1 !important;
+        transition: all 0.8s ease 0.5s;
+    }
+}
+
+.swiper-pagination
+{
+    transform: translate(0px, 120%);
+    opacity: 0;
+    transition: all 0.8s ease 0s;
+    &._active
+    {
+        transform: translate(0px, 0px) !important;
+        opacity: 1 !important;
+        transition: all 0.8s ease 0.5s;
+    }
+}
+
+.element__photo
+{
+    transform: scale(0);
+    transition: all 1s ease 0s;
+    &._active
+    {
+        transform: scale(1) !important;
+    }
+}
+
+.element__title
+{
+    transform: translate(-10%, 0px);
+    opacity: 0;
+    transition: all 0.8s ease 0s;
+    &._active
+    {
+        transform: translate(0px, 0px) !important;
+        opacity: 1 !important;
+        transition: all 0.8s ease 0.5s;
+    }
+}
+
+.button-wrapper .button
+{
+    background-color: rgba(0, 0, 0, 0) !important;
+    transition: all 2s ease 0s;
+    &._active
+    {
+        background-color: black !important;
+    }
+}
+// -------------------------------------------------------------------------------------
+
+// footer section animate
+// -------------------------------------------------------------------------------------
+.footer__line
+{
+    width: 0% !important;
+    transition: all 1.5s ease 0s;
+    &._active
+    {
+        width: 100% !important;
+    }
+}
+// -------------------------------------------------------------------------------------

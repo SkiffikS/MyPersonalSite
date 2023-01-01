@@ -1,0 +1,130 @@
+:root {
+    --tlt-br-cnt: 50;
+    --i: 0;
+}
+
+.progress 
+{
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+
+.progress i {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    transform: rotate(calc(45deg + calc(calc(360deg / var(--tlt-br-cnt)) * var(--i))));
+}
+
+.progress i::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    background: hsla(0, 0%,100%, 12%);
+    width: 5px;
+    height: 20px;
+    border-radius: 999rem;
+    transform: rotate(-45deg);
+    transform-origin: top;
+    opacity: 0;
+
+    animation: barCreationAnimation 100ms ease forwards;
+    animation-delay: calc(var(--i) * 15ms);
+}
+
+.progress .selected1::after {
+    background: hsl(199, 100%, 64%);
+    box-shadow: 0 0 1px hsl(187, 97%, 75%),
+                0 0 3px hsl(183, 97%, 60%),
+                0 0 4px hsl(189, 100%, 50%);
+}
+
+.progress .selected2::after {
+    background: hsl(318, 99%, 65%);
+    box-shadow: 0 0 1px hsl(306, 100%, 79%),
+                0 0 3px hsl(316, 100%, 67%),
+                0 0 4px hsl(327, 100%, 49%);
+}
+
+.progress .selected3::after {
+    background: hsl(287, 100%, 55%);
+    box-shadow: 0 0 1px hsl(278, 100%, 77%),
+                0 0 3px hsl(295, 96%, 63%),
+                0 0 4px hsl(292, 100%, 50%);
+}
+
+.percent-text {
+    font-size: 18px;
+    text-align: center;
+    animation: barCreationAnimation 500ms ease forwards;
+    animation-delay: calc(var(--tlt-br-cnt) * 15ms / 2);
+}
+
+.text1{
+    color: hsl(184, 100%, 50%);
+    text-shadow: 0 0 1px hsl(187, 97%, 75%),
+                0 0 3px hsl(183, 97%, 60%),
+                0 0 4px hsl(189, 100%, 50%);
+    opacity: 0;
+}
+
+.text2{
+    color: hsl(318, 100%, 50%);
+    text-shadow: 0 0 1px hsl(306, 100%, 79%),
+                0 0 3px hsl(316, 100%, 67%),
+                0 0 4px hsl(327, 100%, 49%);
+    opacity: 0;
+}
+.text3{
+    color: hsl(277, 100%, 50%);
+    text-shadow: 0 0 1px hsl(278, 100%, 77%),
+                0 0 3px hsl(295, 96%, 63%),
+                0 0 4px hsl(292, 100%, 50%);
+    opacity: 0;
+}
+
+@keyframes barCreationAnimation {
+    from {opacity: 0}
+    to {opacity: 1}
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

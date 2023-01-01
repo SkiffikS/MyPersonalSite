@@ -1,0 +1,343 @@
+// header links styles
+//---------------------------------------------------------------------------------------------------------------------------
+.element__link 
+{
+    position: relative;
+    display: inline-block;
+    padding: 15px 15%; //15px 15%
+    color: #03e9f4;
+    text-decoration: none;
+    text-transform: uppercase;
+    transition: 0.5s;
+    letter-spacing: 4px;
+    overflow: hidden;
+    &:hover
+    {
+        background: #03e9f4;
+        color: #050801;
+        box-shadow: 0 0 5px #03e9f4, 0 0 25px #03e9f4, 0 0 50px #03e9f4, 0 0 200px #03e9f4;
+    }
+    span 
+    {
+        position: absolute;
+        display: block;
+        &:nth-child(1)
+        {
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 2px;
+            background: linear-gradient(90deg, transparent, #03e9f4);
+            animation: animate1 1s linear infinite;
+        }
+        &:nth-child(2)
+        {
+            top: -100%;
+            right: 0;
+            width: 2px;
+            height: 100%;
+            background: linear-gradient(180deg, transparent, #03e9f4);
+            animation: animate2 1s linear infinite;
+            animation-delay: 0.25s;
+        }
+        &:nth-child(3)
+        {
+            bottom: 0;
+            right: 0;
+            width: 100%;
+            height: 2px;
+            background: linear-gradient(270deg, transparent, #03e9f4);
+            animation: animate3 1s linear infinite;
+            animation-delay: 0.5s;
+        }
+        &:nth-child(4)
+        {
+            bottom: -100%;
+            left: 0;
+            width: 2px;
+            height: 100%;
+            background: linear-gradient(360deg, transparent, #03e9f4);
+            animation: animate4 1s linear infinite;
+            animation-delay: 0.75s;
+        }
+    }
+}
+
+#home-1 {
+  filter: hue-rotate(0deg);
+}
+
+#home-2 {
+  filter: hue-rotate(60deg);
+}
+
+#home-3 {
+  filter: hue-rotate(90deg);
+}
+
+#home-4 {
+  filter: hue-rotate(160deg);
+}
+
+@keyframes animate1 {
+  0% {
+    left: -100%;
+  }
+  50%,
+  100% {
+    left: 100%;
+  }
+}
+
+@keyframes animate2 {
+  0% {
+    top: -100%;
+  }
+  50%,
+  100% {
+    top: 100%;
+  }
+}
+
+@keyframes animate3 {
+  0% {
+    right: -100%;
+  }
+  50%,
+  100% {
+    right: 100%;
+  }
+}
+
+@keyframes animate4 {
+  0% {
+    bottom: -100%;
+  }
+  50%,
+  100% {
+    bottom: 100%;
+  }
+}
+
+//---------------------------------------------------------------------------------------------------------------------------
+
+// resume link styles
+//---------------------------------------------------------------------------------------------------------------------------
+.resume__link
+{
+  display: inline-block;
+  text-transform: none;
+  color: white;
+  padding: 3px;
+  border-radius: 6px;
+  position: relative;
+  overflow: hidden;
+  width: 100%;
+  height: auto;
+  &:before 
+  {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 200%;
+    height: 100%;
+    background: linear-gradient(100deg, #03e9f4, #FF008A, #d400ff, #03e9f4);
+
+    //backdrop-filter: blur(50px);
+    background-size: 50% 100%;
+    border-radius: inherit;
+  }
+  &:hover::before
+  {
+    animation: animate_border .75s linear infinite;
+  }
+  span
+  {
+    margin: auto 0;
+    display: block;
+    background-color: black;
+    padding: 13px 20px;
+    border-radius: 3px;
+    position: relative;
+    z-index: 2;
+    font-weight: 700;
+    font-size: 18px;
+    text-align: center;
+  }
+}
+
+@keyframes animate_border
+{
+  to
+  {
+    transform: translateX(-50%);
+  }
+}
+//---------------------------------------------------------------------------------------------------------------------------
+
+// slider button styles
+//---------------------------------------------------------------------------------------------------------------------------
+.btn {
+  width: 300px;
+  position: relative;
+  padding: 1rem 3rem;
+  font-weight: 501;
+  font-size: 20px;
+  line-height: 1.5;
+  color: black;
+  text-decoration: none;
+  background-color: white;
+  border: transparent;
+  outline: transparent;
+  user-select: none;
+  white-space: nowrap;
+  animation: glow 8s linear infinite;
+
+  &-gradient {
+    color: white;
+    background: linear-gradient(90deg, #00dbde, #fc00ff, #00dbde);
+    background-size: 300%;
+    border-radius: 2em;
+
+    &::before {
+      position: absolute;
+      content: "";
+      top: -5px;
+      left: -5px;
+      bottom: -5px;
+      right: -5px;
+      z-index: -1;
+      background: inherit;
+      background-size: inherit;
+      border-radius: 4em;
+      opacity: 0;
+      transition: 0.5s;
+    }
+
+    &:hover::before {
+      opacity: 1;
+      filter: blur(20px);
+      animation: glow 8s linear infinite;
+    }
+  }
+}
+
+//---------------------------------------------------------------------------------------------------------------------------
+
+
+// services button
+// ----------------------------------------------------------------
+.services__button
+{
+  //width: 288px;
+  margin: 0 auto;
+  margin-top: 100px;
+  .button-wrapper 
+  {
+    position: relative;
+    margin: 0 auto;
+    width: 300px;
+    cursor: url("../img/cursor/pointer_mini.png"), auto;
+    &:hover .button-bg
+    {
+      filter: blur(10px);
+      transition: filter .4s ease-in;
+    }
+    .button
+    {
+      width: 300px;
+      display: block;
+      font-size: 24px;
+      line-height: 32px;
+      font-weight: 700;
+      letter-spacing: 2px;
+      padding: 16px 32px;
+      background-color: black;
+      color: white;
+      border-radius: 50px;
+      border: 0px;
+      cursor: url("../img/cursor/pointer_mini.png"), auto;
+    }
+    .button-bg 
+    {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: calc(100% + 4px);
+      height: calc(100% + 4px);
+      background: linear-gradient(90deg, #FF8038 0%, #FF0099 30.43%, #00EBEB 68.23%, #DB00FF 100%);
+      background-size: 600% 600%;
+      border-radius: 50px;
+      animation: AnimateBorder 4s ease infinite;
+      -webkit-animation: AnimateBorder 4s ease infinite;
+      -moz-animation: AnimateBorder 4s ease infinite;
+      z-index: -1;
+      transform: translate(-2px, -2px);
+      transition: filter 1s ease-in;
+    }
+  }
+}
+
+@keyframes AnimateBorder {
+    0%{background-position:0% 50%}
+    50%{background-position:100% 50%}
+    100%{background-position:0% 50%}
+}
+
+@keyframes glow {
+  to {
+    background-position: 300%;
+  }
+}
+//-------------------------------------------------------------------------------------------
+
+// footer__links
+//-------------------------------------------------------------------------------------------
+.svg-wrapper 
+{
+  margin-top: 0;
+  position: relative;
+  width: 150px !important;
+  height: 40px;
+  display: inline-block;
+  border-radius: 3px;
+  margin-left: 5px;
+  margin-right: 5px;
+  svg
+  {
+    #shape 
+    {
+      stroke-width: 6px;
+      filter: blur(1px);
+      fill: transparent;
+      stroke-dasharray: 85 400;
+      stroke-dashoffset: -220;
+      transition: 1s all ease;
+    }
+    
+  }
+}
+
+#text {
+  width: 150px;
+  margin-top: -30px;
+  text-align: center;
+}
+
+#text a {
+  color: white;
+  text-decoration: none;
+  font-weight: 100;
+  font-size: 14px;
+  font-weight: 700;
+}
+
+.svg-wrapper:hover #shape {
+  stroke-dasharray: 50 0;
+  stroke-width: 5px;
+  stroke-dashoffset: 0;
+  filter: blur(1px);
+}
+
+//-------------------------------------------------------------------------------------------

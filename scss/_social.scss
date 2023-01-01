@@ -1,0 +1,233 @@
+.social__container {
+  display: flex;
+  width: 100%;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+
+.social__container a
+{
+  flex: 0 0 16.6%;
+  text-align: center;
+}
+
+#telegram,
+#instagram,
+#github,
+#envelope,
+#whatsapp,
+#steam 
+{
+  font-size: 40px;
+  background-color: #18191f;
+  color: rgba(255, 255, 255, 1);
+  box-shadow: 2px 2px 2px #00000080, 10px 1px 12px #00000080, 2px 2px 10px #00000080, 2px 2px 3px #00000080, inset 2px 2px 10px #00000080, inset 2px 2px 10px #00000080, inset 2px 2px 10px #00000080, inset 2px 2px 10px #00000080;
+  border-radius: 29px;
+  padding: 11px 19px;
+  animation: animate 3s linear infinite;
+  text-shadow: 0 0 50px #0072ff, 0 0 100px #0072ff, 0 0 150px #0072ff, 0 0 200px #0072ff;
+  transition-duration: 0.5s;
+  &:hover
+  {
+    color: #03e9f4;
+    transform: translateY(-10px);
+  }
+}
+
+#telegram
+{
+  animation-delay: 0.0s;
+}
+#instagram
+{
+  animation-delay: 0.3s;
+}
+#github
+{
+  animation-delay: 0.6s;
+}
+#fenvelope
+{
+  animation-delay: 0.9s;
+}
+#whatsapp
+{
+  animation-delay: 1.2s;
+}
+#steam
+{
+  animation-delay: 1.5s;
+}
+
+@keyframes animate {
+  from {
+    filter: hue-rotate(0deg);
+  }
+  to {
+    filter: hue-rotate(360deg);
+  }
+}
+
+.input-form__box
+{
+  display: flex;
+  justify-content: space-between;
+  margin-top: 100px;
+  gap: 50px;
+}
+
+.form {
+  margin: 0 auto;
+  width: 100%;
+  position: relative;
+  height: 60px;
+  overflow: hidden;
+}
+
+.form input, .form textarea {
+  width: 100%;
+  height: 100%;
+  color: #fff;
+  padding-top: 20px;
+  border: none;
+  background-color: black;
+  resize: none;
+  font-weight: 700;
+}
+
+.form textarea
+{
+  line-height: 1.5;
+}
+
+.form label {
+  position: absolute;
+  bottom: 0px;
+  left: 0px;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  border-bottom: 1px solid white;
+}
+.form label::after {
+  content: "";
+  position: absolute;
+  bottom: -1px;
+  left: 0px;
+  width: 100%;
+  height: 100%;
+  border-bottom: 3px solid #03e9f4;
+  transform: translateX(-100%);
+  transition: all 0.3s ease;
+}
+
+.content-name {
+  position: absolute;
+  bottom: 0px;
+  left: 5px;
+  padding-bottom: 5px;
+  transition: all 0.3s ease;
+  font-weight: 700;
+}
+
+#textarea-span
+{
+  left: 43%; 
+  bottom: 30%;
+}
+
+.form input:focus, .form textarea:focus{
+  outline: none;
+}
+.form input:focus + .label-name .content-name,
+.form input:valid + .label-name .content-name{
+  transform: translateY(-150%);
+  font-size: 14px;
+  left: 0px;
+  color: #03e9f4;
+}
+.form input:focus + .label-name::after,
+.form input:valid .label-name::after{
+  transform: translateX(0%);
+}
+
+.form textarea:focus + .label-name .content-name,
+.form textarea:valid + .label-name .content-name
+{
+  opacity: 0;
+}
+
+.form textarea:focus + .label-name::after,
+form textarea:valid + .label-name::after
+{
+  transform: translateX(0%);
+}
+
+.frame {
+  width: 90%;
+  margin: 40px auto;
+  text-align: center;
+}
+
+.custom-btn {
+  color: #fff;
+  width: 130px;
+  height: 40px;
+  padding: 10px 25px;
+  font-weight: 700;
+  background: transparent;
+  transition: all 0.3s ease;
+  position: relative;
+  display: inline-block;
+}
+
+
+.btn-7 {
+  color: #21ebff;
+  line-height: 40px;
+  padding: 0;
+  border: none;
+}
+.btn-7 span {
+  position: relative;
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+.btn-7:before,
+.btn-7:after {
+  position: absolute;
+  content: "";
+  right: 0;
+  bottom: 0;
+  background: #21ebff;
+  box-shadow: 0 0 5px #21ebff;
+  transition: all 0.3s ease;
+}
+.btn-7:before{
+   height: 50%;
+   width: 2px;
+}
+.btn-7:after {
+  width: 20%;
+  height: 2px;
+}
+
+.btn-7 span:before,
+.btn-7 span:after {
+  position: absolute;
+  content: "";
+  left: 0;
+  top: 0;
+  background: #21ebff;
+  box-shadow: 0 0 5px #21ebff;
+  transition: all 0.3s ease;
+}
+.btn-7 span:before {
+  width: 2px;
+  height: 50%;
+}
+.btn-7 span:after {
+  height: 2px;
+  width: 20%;
+}

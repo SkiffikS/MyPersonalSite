@@ -232,11 +232,11 @@
 
 .progress
 {
-    transform: scale(0);
+    opacity: 0 !important;
     transition: all 1s ease 0s;
     &._active
     {
-        transform: scale(1) !important;
+       opacity: 1 !important;
         transition: all 1s ease 1s;
     }
 }

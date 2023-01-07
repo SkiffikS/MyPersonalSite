@@ -892,7 +892,7 @@ h1, h2, h3, h4, h5, h6 {
     top: 0 !important;
   }
   .projects__slider-title {
-    margin-bottom: -90px !important;
+    margin-bottom: -80px !important;
     font-size: 28px !important;
   }
 }
@@ -1181,6 +1181,7 @@ h1, h2, h3, h4, h5, h6 {
 .swiper-slide img {
   display: block;
   width: 100%;
+  background-color: rgb(35, 35, 35);
 }
 
 .swiper-container {
@@ -1310,10 +1311,36 @@ h1, h2, h3, h4, h5, h6 {
 .single-card .content .title {
   margin-top: -20px;
   font-size: 28px;
+  font-weight: bold;
   line-height: 10px;
+  font-weight: 300;
+}
+@media (max-width: 605px) {
+  .single-card .content .title {
+    font-size: 22px;
+  }
 }
 .single-card .content p {
+  line-height: 1.2;
   margin-top: 20px;
+  text-align: center;
+}
+@media (max-width: 605px) {
+  .single-card .content p {
+    font-size: 14px;
+  }
+}
+@media screen and (max-width: 767px) {
+  .single-card {
+    height: 400px;
+    margin-top: 45px;
+  }
+  .single-card .content {
+    opacity: 1;
+  }
+  .single-card .card-img img {
+    opacity: 1;
+  }
 }
 
 .swiper .swiper-pagination-bullet {
@@ -1991,17 +2018,13 @@ form textarea:valid + .label-name::after {
 }
 
 .progress {
-  -webkit-transform: scale(0);
-      -ms-transform: scale(0);
-          transform: scale(0);
+  opacity: 0 !important;
   -webkit-transition: all 1s ease 0s;
   -o-transition: all 1s ease 0s;
   transition: all 1s ease 0s;
 }
 .progress._active {
-  -webkit-transform: scale(1) !important;
-      -ms-transform: scale(1) !important;
-          transform: scale(1) !important;
+  opacity: 1 !important;
   -webkit-transition: all 1s ease 1s;
   -o-transition: all 1s ease 1s;
   transition: all 1s ease 1s;
@@ -2219,6 +2242,7 @@ body {
   overflow-x: hidden;
   max-width: 1920px;
   margin: 0 auto;
+  scroll-behavior: smooth;
 }
 
 a {
@@ -2241,6 +2265,7 @@ img {
   top: 0;
   z-index: 9999;
   max-width: 1920px;
+  overflow: hidden;
 }
 .header__container {
   height: 100%;
@@ -2261,6 +2286,7 @@ img {
 }
 .header__image img {
   display: block;
+  height: auto;
   min-width: 150px;
   min-height: 60px;
 }
@@ -2289,7 +2315,7 @@ img {
   width: 100%;
 }
 .header__logo img {
-  height: 8vh;
+  max-width: 86.5px;
   width: 40%;
   min-width: 150px;
   min-height: 80px;
@@ -2323,20 +2349,24 @@ img {
 .main__intro {
   width: 100%;
   height: 100vh;
+  max-height: 1080px;
   background: -o-linear-gradient(179.93deg, #6C007D 0.07%, #420D40 31.67%, #451243 73.23%, #300F2E 99.95%);
   background: linear-gradient(270.07deg, #6C007D 0.07%, #420D40 31.67%, #451243 73.23%, #300F2E 99.95%);
   position: absolute;
   top: 0;
   max-width: 1920px;
   margin: 0 auto;
+  overflow: hidden;
 }
 .main__background-1 {
   width: 100%;
   height: 100vh;
+  max-height: 1080px;
   background: url("../img/header/background_codes.png") 0 0/100% 120% no-repeat;
 }
 .main__background-2 {
   height: 100vh;
+  max-height: 1080px;
   background-image: url("../img/header/hacker.png");
   background-repeat: no-repeat;
   background-position: center bottom;
@@ -2345,8 +2375,9 @@ img {
   position: relative;
   max-width: 1536px;
   height: 60vh;
+  max-height: 648px;
   margin: 0 auto;
-  padding-top: 25vh;
+  padding-top: 13%;
 }
 .main__background-2 .intro__container .intro__label {
   display: -webkit-box;
@@ -2360,6 +2391,7 @@ img {
 .main__background-2 .intro__container .intro__label .label {
   width: 40%;
   height: 60vh;
+  max-height: 648px;
   position: relative;
   min-width: 350px;
   -webkit-transition: visibility 3s, opacity 0s linear;
@@ -2373,6 +2405,7 @@ img {
   position: relative;
   width: 100%;
   height: 76vh;
+  max-height: 820.8px;
   -webkit-touch-callout: none; /* iOS Safari */
   -webkit-user-select: none; /* Safari */ /* Konqueror HTML */
   -moz-user-select: none; /* Old versions of Firefox */
@@ -2385,6 +2418,7 @@ img {
   top: 2.5%;
   width: 73.5%;
   height: 57.5vh;
+  max-height: 621px;
   left: 13%;
 }
 .main__background-2 .intro__container .intro__label .label .upper-content .intro__content {
@@ -2410,8 +2444,8 @@ img {
   -webkit-text-emphasis-color: transparent;
           text-emphasis-color: transparent;
   line-height: 200%;
-  padding-top: 5vh;
-  padding-bottom: 2vh;
+  padding-top: 10%;
+  padding-bottom: 10%;
 }
 .main__background-2 .intro__container .intro__label .label .upper-content .intro__content .direction .quotes {
   background: -webkit-gradient(linear, left top, left bottom, from(#FF008A), to(#03e9f4));
@@ -2431,8 +2465,8 @@ img {
   line-height: 150%;
   text-align: center;
   color: #959595;
-  margin-bottom: 2vh;
-  padding-bottom: 1vh;
+  margin-bottom: 5%;
+  padding-bottom: 3%;
 }
 .main__background-2 .intro__container .intro__label .label .upper-content .intro__content .technologies {
   margin-top: auto;
@@ -2445,10 +2479,11 @@ img {
   text-align: center;
   margin: auto 0;
   height: 25vh;
+  max-height: 270px;
 }
 
 .resume {
-  margin-top: 110vh;
+  margin-top: 1188px;
   width: 100%;
 }
 .resume__container {
@@ -2457,7 +2492,7 @@ img {
 }
 .resume__title-1 {
   width: 100%;
-  margin-top: 6vh;
+  margin-top: -5%;
 }
 .resume__title-1 img {
   width: 20%;
@@ -2467,7 +2502,7 @@ img {
 }
 .resume__block {
   margin: 0 auto;
-  margin-top: 10vh;
+  margin-top: 5%;
   background: #242424;
   position: relative;
   width: 100%;
@@ -2568,21 +2603,21 @@ img {
   width: 100%;
   font-weight: 700;
   font-size: 38px;
-  line-height: 2.7vw;
+  line-height: 130%;
   margin: 0;
   margin-top: 10px;
   margin-left: 4%;
 }
 .resume__info .resume__subtitle {
-  padding-top: 2vh;
+  padding-top: 4%;
   font-weight: 600;
   font-size: 18px;
-  line-height: 2.7vw;
+  line-height: 130%;
   color: #B1B1B1;
-  margin-left: 4%;
+  margin-left: 4.5%;
 }
 .resume__info .resume__circle-block {
-  margin-top: 5vh;
+  margin-top: 7%;
   width: 80%;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -2607,8 +2642,8 @@ img {
   line-height: 29px;
   color: #03e9f4;
   text-align: center;
-  height: 5vh;
   text-shadow: 0 0 10px #03e9f4;
+  padding-bottom: 20px;
 }
 .resume__skill-block #skill-title-2 {
   color: #FF008A;
@@ -2620,24 +2655,24 @@ img {
 }
 .resume__skill-block .skill-line {
   width: 10%;
-  height: 0.5vh;
+  height: 3px;
   background: white;
   margin: 0 auto;
-  margin-top: 2vh;
+  margin-top: 3%;
 }
 .resume__skill-block .skill-text {
   font-weight: 700;
   font-size: 16px;
   line-height: 130%;
-  margin-top: 5vh;
-  margin-bottom: 5vh;
+  margin-top: 5%;
+  margin-bottom: 5%;
   text-align: center;
 }
 .resume__button {
   margin-left: 70%;
   width: 20%;
-  padding-top: 5vh;
-  padding-bottom: 5vh;
+  padding-top: 5%;
+  padding-bottom: 5%;
 }
 .resume__button .resume__link {
   margin-right: 10%;
@@ -2645,7 +2680,7 @@ img {
 
 .projects {
   overflow: hidden;
-  margin-top: 150px;
+  margin-top: 80px;
   padding-bottom: 50px;
   width: 100%;
 }
@@ -2656,7 +2691,7 @@ img {
 .projects__title {
   width: 100%;
   margin: 0 auto;
-  margin-top: 6vh;
+  margin-top: 6%;
   padding-bottom: 50px;
 }
 .projects__title img {
@@ -2667,7 +2702,7 @@ img {
 }
 .projects__slider {
   margin: 0 auto;
-  margin-top: 5vh;
+  margin-top: 5%;
   position: relative;
   width: 100%;
   height: 600px;
@@ -2688,6 +2723,7 @@ img {
           text-emphasis-color: transparent;
   line-height: 200%;
   height: 15vh;
+  max-height: 162px;
   padding-top: 10px;
 }
 .projects__slider-title .quotes {
@@ -2766,8 +2802,8 @@ img {
   margin: 0 auto;
 }
 .footer__links {
-  padding-top: 5vh;
-  padding-bottom: 5vh;
+  padding-top: 5%;
+  padding-bottom: 5%;
   width: 100%;
   margin: 0 auto;
   display: -webkit-box;
@@ -2793,8 +2829,8 @@ img {
   background: linear-gradient(45deg, #FF008A, #03e9f4, #FF008A);
 }
 .footer__social {
-  padding-top: 5vh;
-  padding-bottom: 5vh;
+  padding-top: 5%;
+  padding-bottom: 5%;
 }
 .footer__form {
   padding-bottom: 100px;
@@ -2832,6 +2868,11 @@ img {
 
 .intro__container {
   padding: 0;
+}
+
+.main__intro {
+  max-width: 1920px;
+  max-height: 1080px;
 }
 
 /*

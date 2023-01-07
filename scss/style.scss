@@ -45,6 +45,7 @@ body
     overflow-x: hidden;
     max-width: 1920px;
     margin: 0 auto;
+    scroll-behavior: smooth;
 }
 
 a
@@ -71,6 +72,7 @@ img
     top: 0;
     z-index: 9999;
     max-width: 1920px;
+    overflow: hidden;
     &__container
     {
         height: 100%;
@@ -86,6 +88,7 @@ img
         img
         {
             display: block;
+            height: auto;
             min-width: 150px;
             min-height: 60px;
         }
@@ -116,7 +119,8 @@ img
         img
         {
             //margin-top: 1vh;
-            height: 8vh;
+            //height: 8vh;
+            max-width: 86.5px;
             width: 40%;
             min-width: 150px;
             min-height: 80px;
@@ -152,22 +156,26 @@ img
     {
         width: 100%;
         height: 100vh;
+        max-height: 1080px;
         //background: url("../img/header/background_codes.png") 0 0/100% 120% no-repeat;
         background: linear-gradient(270.07deg, #6C007D 0.07%, #420D40 31.67%, #451243 73.23%, #300F2E 99.95%);
         position: absolute;
         top: 0;
         max-width: 1920px;
         margin: 0 auto;
+        overflow: hidden;
     }
     &__background-1
     {
         width: 100%;
         height: 100vh;
+        max-height: 1080px;
         background: url("../img/header/background_codes.png") 0 0/100% 120% no-repeat;
     }
     &__background-2
     {
         height: 100vh;
+        max-height: 1080px;
         background-image: url("../img/header/hacker.png");
         background-repeat: no-repeat;
         //background-attachment: fixed;
@@ -178,8 +186,9 @@ img
             position: relative;
             max-width: 1536px;
             height: 60vh;
+            max-height: 648px;
             margin: 0 auto;
-            padding-top: 25vh;
+            padding-top: 13%;
             .intro__label
             {
                 display: flex;
@@ -189,6 +198,7 @@ img
                 {
                     width: 40%;
                     height: 60vh;
+                    max-height: 648px;
                     position: relative;
                     min-width: 350px;
                     transition: visibility 3s, opacity 0s linear;
@@ -200,6 +210,7 @@ img
                         position: relative;
                         width: 100%;
                         height: 76vh;
+                        max-height: 820.8px;
                         -webkit-touch-callout: none; /* iOS Safari */
                         -webkit-user-select: none; /* Safari */
                         -khtml-user-select: none; /* Konqueror HTML */
@@ -214,6 +225,7 @@ img
                         top: 2.5%;
                         width: 73.5%;
                         height: 57.5vh;
+                        max-height: 621px;
                         left: 13%;
                         .intro__content
                         {
@@ -235,8 +247,8 @@ img
                                 background-clip: text;
                                 text-emphasis-color: transparent;
                                 line-height: 200%;
-                                padding-top: 5vh;
-                                padding-bottom: 2vh;
+                                padding-top: 10%;
+                                padding-bottom: 10%;
                                 .quotes
                                 {
                                     background: linear-gradient(180deg, $pink-color 0%, $blue-color 100%);
@@ -255,8 +267,8 @@ img
                                 line-height: 150%;
                                 text-align: center;
                                 color: #959595;
-                                margin-bottom: 2vh;
-                                padding-bottom: 1vh;
+                                margin-bottom: 5%;
+                                padding-bottom: 3%;
                             }
                             .technologies
                             {
@@ -270,6 +282,7 @@ img
                                 text-align: center;
                                 margin: auto 0;
                                 height: 25vh;
+                                max-height: 270px;
                             }
                         }
                     }
@@ -281,7 +294,7 @@ img
 
 .resume
 {
-    margin-top: 110vh;
+    margin-top: 1188px;
     width: 100%;
     &__container
     {
@@ -291,7 +304,7 @@ img
     &__title-1
     {
         width: 100%;
-        margin-top: 6vh;
+        margin-top: -5%;
         img
         {
             width: 20%;
@@ -303,7 +316,7 @@ img
     &__block
     {
         margin: 0 auto;
-        margin-top: 10vh;
+        margin-top: 5%;
         background: $back_color;
         position: relative;
         width: 100%;
@@ -392,23 +405,23 @@ img
             width: 100%;
             font-weight: 700;
             font-size: 38px;
-            line-height: 2.7vw;
+            line-height: 130%;
             margin: 0;
             margin-top: 10px;
             margin-left: 4%;
         }
         .resume__subtitle
         {
-            padding-top: 2vh;
+            padding-top: 4%;
             font-weight: 600;
             font-size: 18px;
-            line-height: 2.7vw;
+            line-height: 130%;
             color: #B1B1B1;
-            margin-left: 4%;
+            margin-left: 4.5%;
         }
         .resume__circle-block
         {
-            margin-top: 5vh;
+            margin-top: 7%;
             width: 80%;
             display: flex;
             justify-content: space-between;
@@ -432,8 +445,8 @@ img
             line-height: 29px;
             color: $blue-color;
             text-align: center;
-            height: 5vh;
             text-shadow: 0 0 10px $blue-color;
+            padding-bottom: 20px;
         }
         #skill-title-2
         {
@@ -448,18 +461,18 @@ img
         .skill-line
         {
             width: 10%;
-            height: 0.5vh;
+            height: 3px;
             background: white;
             margin: 0 auto;
-            margin-top: 2vh;
+            margin-top: 3%;
         }
         .skill-text
         {
             font-weight: 700;
             font-size: 16px;
             line-height: 130%;
-            margin-top: 5vh;
-            margin-bottom: 5vh;
+            margin-top: 5%;
+            margin-bottom: 5%;
             text-align: center;
         }
     }
@@ -467,8 +480,8 @@ img
     {
         margin-left: 70%;
         width: 20%;
-        padding-top: 5vh;
-        padding-bottom: 5vh;
+        padding-top: 5%;
+        padding-bottom: 5%;
         .resume__link
         {
             margin-right: 10%;
@@ -479,7 +492,7 @@ img
 .projects
 {
     overflow: hidden;
-    margin-top: 150px;
+    margin-top: 80px;
     padding-bottom: 50px;
     width: 100%;
     &__container
@@ -491,7 +504,7 @@ img
     {
         width: 100%;
         margin: 0 auto;
-        margin-top: 6vh;
+        margin-top: 6%;
         padding-bottom: 50px;
         img
         {
@@ -504,7 +517,7 @@ img
     &__slider
     {
         margin: 0 auto;
-        margin-top: 5vh;
+        margin-top: 5%;
         position: relative;
         width: 100%;
         height: 600px;
@@ -524,6 +537,7 @@ img
         text-emphasis-color: transparent;
         line-height: 200%;
         height: 15vh;
+        max-height: 162px;
         padding-top: 10px;
         .quotes
         {
@@ -604,8 +618,8 @@ img
     }
     &__links
     {
-        padding-top: 5vh;
-        padding-bottom: 5vh;
+        padding-top: 5%;
+        padding-bottom: 5%;
         width: 100%;
         margin: 0 auto;
         display: flex;
@@ -627,8 +641,8 @@ img
     }
     &__social
     {
-        padding-top: 5vh;
-        padding-bottom: 5vh;
+        padding-top: 5%;
+        padding-bottom: 5%;
     }
     &__form
     {
@@ -674,6 +688,11 @@ img
     padding: 0;
 }
 
+.main__intro
+{
+    max-width: 1920px;
+    max-height: 1080px;
+}
 /*
 @keyframes steam {
   0% {

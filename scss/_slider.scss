@@ -99,6 +99,7 @@
 .swiper-slide img {
     display: block;
     width: 100%;
+    background-color: rgb(35, 35, 35);
 }
 
 .swiper-container
@@ -138,7 +139,8 @@
     height: 100%;
 }
 
-.single-card {
+.single-card 
+{
   position: relative;
   width: 300px;
   height: 300px;
@@ -149,9 +151,9 @@
   background: #010615;
   margin: 0 auto;
   margin-top: 90px;
-  &:hover, &.hover {
+  &:hover, &.hover{
     height: 400px;
-     margin-top: 45px;
+    margin-top: 45px;
     .content {
        opacity: 1;
     }
@@ -225,11 +227,37 @@
     {
       margin-top: -20px;
       font-size: 28px;
+      font-weight: bold;
       line-height: 10px;
+      font-weight: 300;
+      @media (max-width: 605px)
+      {
+        font-size: 22px;
+      }
     }
     p
     {
+        line-height: 1.2;
         margin-top: 20px;
+        text-align: center;
+        @media (max-width: 605px)
+        {
+          font-size: 14px;
+        }
+    }
+  }
+  @media screen and (max-width: 767px){
+    height: 400px;
+    margin-top: 45px;
+    .content {
+       opacity: 1;
+    }
+    
+    .card-img {
+      
+      img {
+        opacity: 1;
+      }
     }
   }
 }

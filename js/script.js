@@ -24,94 +24,33 @@ hamburger.addEventListener("click", () => {
 // -----------------------------------------------------------------------------------------------------------------------------------
 const wrapper = document.querySelectorAll('.progress');
 
-const barCount = 50;
-const percent1 = 50 * 82 / 100;
-const percent2 = 50 * 63 / 100;
-const percent3 = 50 * 75 / 100;
+if (wrapper.length > 0) {
+    const barCount = 50;
+    const percent1 = 50 * 82 / 100;
+    const percent2 = 50 * 63 / 100;
+    const percent3 = 50 * 75 / 100;
 
-for (let index = 0; index < barCount; index++) {
-    const className = index < percent1 ? 'selected1' : '';
-    wrapper[0].innerHTML += `<i style="--i: ${index};" class="${className} _anim-items"></i>`;
+    for (let index = 0; index < barCount; index++) {
+        const className = index < percent1 ? 'selected1' : '';
+        wrapper[0].innerHTML += `<i style="--i: ${index};" class="${className} _anim-items"></i>`;
+    }
+
+    wrapper[0].innerHTML += `<p class="selected percent-text text1  _anim-items">82%<br>Особисті навички</p>`
+
+    for (let index = 0; index < barCount; index++) {
+        const className = index < percent2 ? 'selected2' : '';
+        wrapper[1].innerHTML += `<i style="--i: ${index};" class="${className} _anim-items"></i>`;
+    }
+
+    wrapper[1].innerHTML += `<p class="selected percent-text text2  _anim-items">63%<br>Робота в команді</p>`
+
+    for (let index = 0; index < barCount; index++) {
+        const className = index < percent3 ? 'selected3' : '';
+        wrapper[2].innerHTML += `<i style="--i: ${index};" class="${className} _anim-items"></i>`;
+    }
+
+    wrapper[2].innerHTML += `<p class="selected percent-text text3  _anim-items">75%<br>Швидкісь / Якість</p>`   
 }
-
-wrapper[0].innerHTML += `<p class="selected percent-text text1  _anim-items">82%<br>Особисті навички</p>`
-
-for (let index = 0; index < barCount; index++) {
-    const className = index < percent2 ? 'selected2' : '';
-    wrapper[1].innerHTML += `<i style="--i: ${index};" class="${className} _anim-items"></i>`;
-}
-
-wrapper[1].innerHTML += `<p class="selected percent-text text2  _anim-items">63%<br>Робота в команді</p>`
-
-for (let index = 0; index < barCount; index++) {
-    const className = index < percent3 ? 'selected3' : '';
-    wrapper[2].innerHTML += `<i style="--i: ${index};" class="${className} _anim-items"></i>`;
-}
-
-wrapper[2].innerHTML += `<p class="selected percent-text text3  _anim-items">75%<br>Швидкісь / Якість</p>`
-// -----------------------------------------------------------------------------------------------------------------------------------
-
-// slider
-// -----------------------------------------------------------------------------------------------------------------------------------
-var swiper = new Swiper(".mySwiper", {
-    loop: true,
-    loopedSlides: 3.5,
-    grabCursor: true,
-    centeredSlides: true,
-    slidesPerView: 3.5,
-    //spaceBetween: 90,
-    autoHeight: true,
-    //freeMode: true,
-    speed: 800,
-    effect: "coverflow",
-    coverflowEffect: {
-        rotare: 20,
-        stretch: 50,
-        slideShadow: true,
-    },
-    coverflowEffect: {
-        rotate: 50,
-        stretch: 0,
-        depth: 100,
-        modifier: 1,
-        slideShadows: false,
-    },
-    pagination: {
-        el: ".swiper-pagination",
-        clickable: true,
-    },
-    autoplay: {
-        delay: 2500,
-        disableOnInteraction: false,
-    },
-    keyboard: {
-        enabled: true,
-        onlyInViewport: true,
-        pageUpDown: true,
-    },
-    navigation: {
-        nextEl: ".swiper-button-next",
-        prevEl: ".swiper-button-prev",
-    },
-    breakpoints: {
-        0: {
-            slidesPerView: 1,
-        },
-        810: {
-            slidesPerView: 1.5,
-        },
-        992: {
-            slidesPerView: 2,
-        },
-        1040: {
-            slidesPerView: 3,
-        },
-        1690: 
-        {
-            slidesPerView: 3.5,
-        },
-    },
-});
 // -----------------------------------------------------------------------------------------------------------------------------------
 
 // run button
@@ -166,4 +105,51 @@ if (animItems.length > 0) {
         animOnScroll();
     }, 300);
 }
+// -----------------------------------------------------------------------------------------------------------------------------------
+
+// scroll animation
+// -----------------------------------------------------------------------------------------------------------------------------------
+function getElementY(query) {
+    el = document.querySelector(query);
+    const rect = el.getBoundingClientRect();
+    return rect.top + window.scrollY;
+}
+
+function doScrolling(element, duration) {
+    var startingY = window.pageYOffset;
+    var elementY = getElementY(element);
+
+    var url = window.location.pathname;
+    var filename = url.substring(url.lastIndexOf('/') + 1);
+
+    var targetY = document.body.scrollHeight - elementY < window.innerHeight ? document.body.scrollHeight - window.innerHeight : elementY;
+    if ((window.innerWidth > 767) && (filename == "index.html")) {
+        var diff = targetY + 800 - startingY;
+    } else {
+        var diff = targetY - startingY;
+    }
+
+    var easing = function (t) { return t < .5 ? 4 * t * t * t : (t - 1) * (2 * t - 2) * (2 * t - 2) + 1 }
+    var start;
+
+    if (!diff) return;
+
+    window.requestAnimationFrame(function step(timestamp) {
+        if (!start) start = timestamp;
+
+        var time = timestamp - start;
+
+        var percent = Math.min(time / duration, 1);
+
+        percent = easing(percent);
+
+        window.scrollTo(0, startingY + diff * percent);
+
+        if (time < duration) {
+            window.requestAnimationFrame(step);
+        }
+    })
+}
+
+document.getElementById('home-4').addEventListener('click', doScrolling.bind(null, '#footer__social', 3000));
 // -----------------------------------------------------------------------------------------------------------------------------------

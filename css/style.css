@@ -874,7 +874,7 @@ h1, h2, h3, h4, h5, h6 {
     width: 100% !important;
   }
   .projects__title {
-    padding-bottom: 50px !important;
+    padding-bottom: 100px !important;
   }
 }
 @media (max-width: 455px) {
@@ -892,7 +892,7 @@ h1, h2, h3, h4, h5, h6 {
     top: 0 !important;
   }
   .projects__slider-title {
-    margin-bottom: -80px !important;
+    margin-bottom: -35px !important;
     font-size: 28px !important;
   }
 }
@@ -2725,6 +2725,7 @@ img {
   height: 15vh;
   max-height: 162px;
   padding-top: 10px;
+  z-index: 10;
 }
 .projects__slider-title .quotes {
   background: -webkit-gradient(linear, left top, left bottom, from(#FF008A), to(#03e9f4));

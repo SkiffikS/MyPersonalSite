@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100;500;700&display=swap');
 @import url('http://fonts.cdnfonts.com/css/arcade-classic');
 @import url('https://fonts.googleapis.com/css?family=Poppins:100,100i,200,200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i');
 
@@ -59,6 +59,11 @@ img
 {
     width: 100%;
     height: 100%;
+}
+
+.center-text
+{
+    text-align: center;
 }
 
 
@@ -262,7 +267,7 @@ img
                             {
                                 width: 80%;
                                 margin: 0 auto;
-                                font-weight: 501;
+                                font-weight: 500;
                                 font-size: 18px;
                                 line-height: 150%;
                                 text-align: center;
@@ -660,7 +665,6 @@ img
     &__title
     {
         font-size: 38px;
-        font-weight: 500;
         letter-spacing: 8px;
         padding: 20px 10px;
         font-weight: 700;
@@ -693,6 +697,113 @@ img
 {
     max-width: 1920px;
     max-height: 1080px;
+}
+
+.project
+{
+    &__container
+    {
+        width: auto;
+        max-width: 1536px;
+        margin: 0 auto;
+        padding: 0 15px;
+        padding-top: 120px;
+        padding-bottom: 80px;
+        font-size: 14px;
+        line-height: 1.5;
+        font-weight: 500;
+        img
+        {
+            margin: 0 auto;
+            width: auto;
+            height: auto;
+            max-width: 1536px;
+            max-height: 846px;
+        }
+    }
+    &__line
+    {
+        height: 3px;
+        width: 100%;
+        background-color: white;
+        margin-top: 10px;
+        margin-bottom: 10px;
+    }
+    &__h1
+    {
+        font-size: 48px;
+        font-weight: 700;
+    }
+    &__h2
+    {
+        font-size: 40px;
+        font-weight: 700;
+    }
+    &__h3
+    {
+        font-size: 32px;
+        font-weight: 700;
+    }
+    &__h4
+    {
+        font-size: 26px;
+        font-weight: 700;
+    }
+    &__h5
+    {
+        font-size: 18px;
+        font-weight: 700;
+    }
+    &__h6
+    {
+        font-size: 10px;
+        font-weight: 700;
+    }
+    &__button
+    {
+        width: 175.55px;
+        margin: 0 auto;
+        padding: 20px 0px;
+        cursor: url("../img/cursor/pointer_mini.png"), auto;
+        button
+        {
+            background:$blue-color;
+            color:#fff;
+            border:none;
+            position:relative;
+            height: 60px;
+            font-size: 20px;
+            padding: 0 40px;
+            cursor: pointer;
+            transition: 800ms ease all;
+            outline: none;
+            cursor: url("../img/cursor/pointer_mini.png"), auto;
+        }
+        button:hover{
+            background:$back_color;
+            color:$blue-color;
+        }
+        button:before,button:after{
+            content: '';
+            position: absolute;
+            top: 0;
+            right: 0;
+            height: 2px;
+            width: 0;
+            background: $blue-color;
+            transition: 400ms ease all;
+        }
+        button:after{
+            right: inherit;
+            top: inherit;
+            left: 0;
+            bottom: 0;
+        }
+        button:hover:before,button:hover:after{
+            width: 100%;
+            transition: 800ms ease all;
+        }
+    }
 }
 /*
 @keyframes steam {

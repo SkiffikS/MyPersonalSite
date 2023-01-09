@@ -227,9 +227,8 @@
     {
       margin-top: -20px;
       font-size: 28px;
-      font-weight: bold;
       line-height: 10px;
-      font-weight: 300;
+      font-weight: 500;
       @media (max-width: 605px)
       {
         font-size: 22px;
@@ -240,6 +239,7 @@
         line-height: 1.2;
         margin-top: 20px;
         text-align: center;
+        font-weight: 100;
         @media (max-width: 605px)
         {
           font-size: 14px;

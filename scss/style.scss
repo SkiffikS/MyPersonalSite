@@ -394,8 +394,10 @@ img
                 position: absolute;
                 inset: 5px;
                 border-radius: 16px;
-                background-color: $back_color;
+                background-color: rgb(120, 120, 120);
                 z-index: 1;
+                text-align: center;
+                padding-top: 60%;
             }
         }
     }

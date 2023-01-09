@@ -2592,8 +2592,10 @@ img {
   position: absolute;
   inset: 5px;
   border-radius: 16px;
-  background-color: #242424;
+  background-color: rgb(120, 120, 120);
   z-index: 1;
+  text-align: center;
+  padding-top: 60%;
 }
 .resume__info {
   -webkit-box-flex: 0;

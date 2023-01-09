@@ -11,6 +11,10 @@
     transition: 0.5s;
     letter-spacing: 4px;
     overflow: hidden;
+    @media (max-width: 767px)
+    {
+      letter-spacing: 0px;
+    }
     &:hover
     {
         background: #03e9f4;

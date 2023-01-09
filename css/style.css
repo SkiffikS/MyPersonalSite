@@ -191,6 +191,11 @@ h1, h2, h3, h4, h5, h6 {
   letter-spacing: 4px;
   overflow: hidden;
 }
+@media (max-width: 767px) {
+  .element__link {
+    letter-spacing: 0px;
+  }
+}
 .element__link:hover {
   background: #03e9f4;
   color: #050801;
